@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 import pandas as pd
 
-chrome_driver=r"D:\VSCode Data\chromedriver-win64\chromedriver.exe"
+chrome_driver=r"your path"
 service=Service(chrome_driver)
 driver=webdriver.Chrome(service=service)
 
@@ -37,7 +37,7 @@ for i, url in enumerate(urls):
 print ("Results displayed. Exiting the automation.")
 driver.quit()
 
-excel_file_save_path=r"D:\VSCode Data\Data_scraper.xlsx"
+excel_file_save_path=r"result save path .xlsx"
 df=pd.DataFrame(urls,columns=["Links STACKOVERFLOW"])
 df.to_excel(excel_file_save_path,index=False)
 print(f"File saved at {excel_file_save_path}")
